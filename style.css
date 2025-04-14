@@ -1,0 +1,22 @@
+/* 新增精英徽章 */
+.badges {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.badges span {
+  background: #1a1a1a;
+  color: #ffd700;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* 加密联系方式样式 */
+.crypted {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 2px;
+  color: #2c3e50;
+  background: #f8f9fa;
+  padding: 2px 5px;
+}
