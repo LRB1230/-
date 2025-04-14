@@ -1,0 +1,40 @@
+<!-- 修改标题和结构化数据 -->
+<title>猫哥的征婚主页 | 深圳·18岁·跨境电商CEO</title>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "罗与泉（猫哥）",
+  "age": 18,
+  "gender": "male",
+  "seeks": "Relationship",
+  "netWorth": "100M",
+  "image": "assets/img/hero-photo.jpg",
+  "description": "白手起家的年轻企业家，寻找人生最佳队友"
+}
+</script>
+
+<!-- 更新英雄区 -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>寻找我的事业合伙人+人生伴侣</h1>
+    <p>18岁天才CEO | 深圳跨境电商领军者 | 运动狂热分子</p>
+    <div class="badges">
+      <span>🏆 行业Top1%</span>
+      <span>💻 5年IT老兵</span>
+      <span>🏋️ 健身达人</span>
+    </div>
+  </div>
+  <img src="assets/img/catbrother.jpg" alt="猫哥形象照" class="hero-image">
+</section>
+
+<!-- 更新联系方式 -->
+<div class="safe-contact">
+  <button @click="showContact = true">🐱 点击获取黄金联系方式</button>
+  <div v-if="showContact" class="contact-info">
+    微信：<span class="crypted">lyq12y</span><br>
+    QQ：<span class="crypted">385739425</span><br>
+    邮箱：<span class="crypted">385739425@qq.com</span>
+  </div>
+</div>
