@@ -1,40 +1,224 @@
-<!-- 修改标题和结构化数据 -->
-<title>猫哥的征婚主页 | 深圳·18岁·跨境电商CEO</title>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>猫哥的征婚启事</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    /* 基本设置 */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #fff;
+      overflow-x: hidden;
+    }
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "罗与泉（猫哥）",
-  "age": 18,
-  "gender": "male",
-  "seeks": "Relationship",
-  "netWorth": "100M",
-  "image": "assets/img/hero-photo.jpg",
-  "description": "白手起家的年轻企业家，寻找人生最佳队友"
-}
-</script>
+    canvas#particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+    }
 
-<!-- 更新英雄区 -->
-<section class="hero">
-  <div class="hero-text">
-    <h1>寻找我的事业合伙人+人生伴侣</h1>
-    <p>18岁天才CEO | 深圳跨境电商领军者 | 运动狂热分子</p>
-    <div class="badges">
-      <span>🏆 行业Top1%</span>
-      <span>💻 5年IT老兵</span>
-      <span>🏋️ 健身达人</span>
-    </div>
-  </div>
-  <img src="assets/img/catbrother.jpg" alt="猫哥形象照" class="hero-image">
-</section>
+    /* 页面头部 */
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+    header h1 {
+      font-size: 60px;
+      margin-bottom: 15px;
+      background: linear-gradient(to right, #fceabb, #f8b500);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    header p {
+      font-size: 20px;
+      color: #ddd;
+    }
 
-<!-- 更新联系方式 -->
-<div class="safe-contact">
-  <button @click="showContact = true">🐱 点击获取黄金联系方式</button>
-  <div v-if="showContact" class="contact-info">
-    微信：<span class="crypted">lyq12y</span><br>
-    QQ：<span class="crypted">385739425</span><br>
-    邮箱：<span class="crypted">385739425@qq.com</span>
-  </div>
-</div>
+    /* 各个信息板块 */
+    .section {
+      max-width: 900px;
+      margin: 40px auto;
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+      animation: fadeInUp 1s ease both;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section h2 {
+      font-size: 28px;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    .section p, .section li {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #eee;
+    }
+
+    /* 联系方式 */
+    .contact-info {
+      background: rgba(0,0,0,0.6);
+      padding: 30px;
+      margin-top: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
+    /* 页脚 */
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #aaa;
+    }
+
+    .highlight {
+      color: #ffd369;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <header>
+    <h1>猫哥的征婚启事</h1>
+    <p>欢迎来到罗宇泉（猫哥）的个人专属征婚页面</p>
+  </header>
+  
+  <section class="section">
+    <h2>关于我</h2>
+    <p>大家好，我叫 <span class="highlight">罗宇泉</span>，江湖人称 <span class="highlight">猫哥</span>。现年 <span class="highlight">18岁</span>，从事 IT 行业已有 <span class="highlight">5年</span>，在业内属于佼佼者，年薪高达 <span class="highlight">800万</span>。</p>
+    <p>我在深圳拥有 <span class="highlight">两家公司</span>，在上海拥有 <span class="highlight">8套房产</span>。精通多种专业软件，职业技能方面也毫不逊色，曾在技能大赛中获奖：</p>
+    <ul>
+      <li>数字艺术设计省级一等奖 × 2</li>
+      <li>数字艺术设计国家级一等奖</li>
+    </ul>
+    <p>平时我喜欢运动，热爱锻炼，身体素质非常棒，乐观开朗，靠谱有趣。</p>
+  </section>
+  
+  <section class="section">
+    <h2>我的人生经历</h2>
+    <p>从大学毕业起，我便进入了技术行业，并迅速在这个领域取得了显著的成绩。多年的努力使我在技术、项目管理等多个方面积累了丰富的经验。五年来，我不仅在技术上取得了诸多荣誉，还通过领导团队创新和改进工作流程，使两家公司在行业内稳居前列。</p>
+    <p>我一直坚信，只有不断挑战自己，才能走得更远。因此，我在职业生涯的每一步都不忘初心，勇于创新，始终保持着积极进取的态度。</p>
+  </section>
+
+  <section class="section">
+    <h2>我心中的理想对象</h2>
+    <p>我喜欢 <span class="highlight">活泼、开朗、可爱</span> 的女孩子，最好来自 <span class="highlight">四川</span>，性格 <span class="highlight">温柔体贴</span>，有点小傲娇更好，我们可以一起谈天说地、奔赴未来。</p>
+  </section>
+
+  <section class="section">
+    <h2>我的个人性格</h2>
+    <p>我性格开朗、幽默，乐于与他人分享自己的想法和经历。我重视真诚和善良，喜欢与那些真心待人的人建立关系。作为一个工作中的领导者，我会为团队提供明确的方向，并致力于激励每一个人发挥出他们的潜力。</p>
+    <p>在生活中，我是一个积极向上的人，总是乐观面对挑战。无论是工作中的压力，还是生活中的小困扰，我总能从容应对。</p>
+  </section>
+  
+  <section class="section contact-info">
+    <h2>联系方式</h2>
+    <p>微信号：<span class="highlight">lyq12y</span></p>
+    <p>QQ号：<span class="highlight">385739425</span></p>
+    <p>邮箱：<span class="highlight">385739425@qq.com</span></p>
+  </section>
+  
+  <footer>
+    <p>© 2025 猫哥征婚专属页面 | 爱与缘分，只为遇见你</p>
+  </footer>
+  
+  <script>
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let particlesArray;
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    window.addEventListener('resize', function() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      init();
+    });
+
+    const colors = ['#f8b500', '#fceabb', '#ffffff'];
+
+    function Particle(x, y, directionX, directionY, size, color) {
+      this.x = x;
+      this.y = y;
+      this.directionX = directionX;
+      this.directionY = directionY;
+      this.size = size;
+      this.color = color;
+    }
+
+    Particle.prototype.draw = function() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+      ctx.fillStyle = this.color;
+      ctx.fill();
+    };
+
+    Particle.prototype.update = function() {
+      if (this.x + this.size > canvas.width || this.x - this.size < 0) {
+        this.directionX = -this.directionX;
+      }
+      if (this.y + this.size > canvas.height || this.y - this.size < 0) {
+        this.directionY = -this.directionY;
+      }
+      this.x += this.directionX;
+      this.y += this.directionY;
+      this.draw();
+    };
+
+    function init() {
+      particlesArray = [];
+      let numberOfParticles = (canvas.width * canvas.height) / 15000;
+      for (let i = 0; i < numberOfParticles; i++) {
+        let size = Math.random() * 2 + 1;
+        let x = Math.random() * (canvas.width - size * 2);
+        let y = Math.random() * (canvas.height - size * 2);
+        let directionX = (Math.random() - 0.5) * 0.8;
+        let directionY = (Math.random() - 0.5) * 0.8;
+        let color = colors[Math.floor(Math.random() * colors.length)];
+        particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+      }
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < particlesArray.length; i++) {
+        particlesArray[i].update();
+      }
+    }
+
+    init();
+    animate();
+  </script>
+</body>
+</html>
